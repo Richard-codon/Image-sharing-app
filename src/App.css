@@ -1,38 +1,103 @@
+/* App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f2; /* Light Gray */
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 2.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ImageUpload Styles */
+.image-upload {
+  margin-bottom: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.upload-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.upload-input {
+  display: none;
+}
+
+.upload-label {
+  background-color: #007bff;
   color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.upload-label:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ImageCard Styles */
+.image-card {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 1.5rem;
+}
+
+.image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-card img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.image-card-content {
+  padding: 1.5rem;
+}
+
+.image-card-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.like-button,
+.dislike-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.like-button:hover,
+.dislike-button:hover {
+  transform: scale(1.1);
+}
+
+.comment-section {
+  padding: 1rem;
+  border-top: 1px solid #ddd;
 }

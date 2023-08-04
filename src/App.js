@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+//import modules from react library
+import React, { useState } from 'react';
 import './App.css';
+import ImageUpload from './ImageUpload';
+import ImageCard from './ImageCard';
 
-function App() {
+//the main functional component
+const App = () => {
+  //defining states to handle image urls and initially setting to an empty array
+  const [imageUrls, setImageUrls] = useState([]);
+  
+  //function to handle image upload 
+  const handleImageUpload = (imageUrl) => {
+    //function to update the urls of the images 
+    setImageUrls([...imageUrls, imageUrl]);
+  };
+
+  console.log('imageUrls:', imageUrls); // Adding this console log for debugging purposes
+ //JSX for returning the main functional components
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>FreeShow</h1>
+      <ImageUpload onImageUpload={handleImageUpload} />
+      <div className="image-grid">
+        {imageUrls.map((imageUrl) => (
+          <ImageCard key={imageUrl} imageUrl={imageUrl} />
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
