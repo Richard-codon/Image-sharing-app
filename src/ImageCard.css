@@ -1,0 +1,63 @@
+/* ImageCard.css */
+
+.image-card {
+  border: none;
+  text-align: left;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.image-card-content {
+  padding: 1.5rem;
+  background-color: #fff;
+}
+
+.image-card-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Styles for the like and dislike buttons */
+.image-card-buttons button {
+  padding: 6px 12px;
+  margin: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.image-card-buttons button.like {
+  background-color: green;
+  color: white;
+}
+
+.image-card-buttons button.dislike {
+  background-color: red;
+  color: white;
+}
+
+/* Styles for the comments section */
+.comments {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.comments p {
+  margin: 4px 0;
+}
