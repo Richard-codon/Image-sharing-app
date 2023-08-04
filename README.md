@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# Image-sharing-app
+Developed an interactive web application using React for image uploading, liking, disliking, and commenting. Leveraged Express.js for the backend to handle image storage, user interactions, and comments. Implemented dynamic rendering of images and user interactions in real-time.
+>>>>>>> 9aa07a8483721e4c257d898de2372fdc2b317802
